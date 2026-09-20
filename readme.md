@@ -1,4 +1,4 @@
-# ⚙️ MARK LII (52)
+# ⚙️AI ASSISTANT (52)
 ### The Ultimate Cross-Platform Personal AI Assistant — By FatihMakes
 
 > 📺 **[Watch the full setup video on YouTube](https://www.youtube.com/@FatihMakes)**
