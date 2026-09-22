@@ -3,22 +3,65 @@ config/api_keys.json
 config/certs/
 *.pem
 *.key
+*.p12
+*.pfx
 
 # ── Python ───────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
+*$py.class
+*.so
+*.egg
 *.egg-info/
+dist/
+build/
+*.whl
+.Python
 .venv/
 venv/
 env/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+.pyre/
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+*.cover
+*.log
 
 # ── Runtime state ────────────────────────────────────────────────────────
 memory/*.json
+!memory/.gitkeep
 *.log
+*.log.*
+*.tmp
+*.temp
 
 # ── Editor / OS ──────────────────────────────────────────────────────────
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+.DS_Store
 Thumbs.db
 desktop.ini
 *.bak
+.history/
+
+# ── Playwright browsers (optional, can be large) ─────────────────────────
+# Uncomment if you want to exclude browser binaries
+# .playwright/
+
+# ── Local development ────────────────────────────────────────────────────
+*.local
+.env.local
+test_output/
+debug/
