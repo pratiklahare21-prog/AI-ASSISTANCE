@@ -1,9 +1,15 @@
-# ⚙️AI ASSISTANT (52)
+# ⚙️ MARK LII - AI Personal Assistant
 ### The Ultimate Cross-Platform Personal AI Assistant — By FatihMakes
+
+[![Python Version](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-green.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](https://github.com/FatihMakes/Mark-LII)
 
 > 📺 **[Watch the full setup video on YouTube](https://www.youtube.com/@FatihMakes)**
 
-A real-time voice AI that can hear, see, understand, and control your computer — on any OS. Supports Windows, macOS, and Linux. Built on the Gemini Live API for native audio streaming, delivering zero subscriptions and total digital autonomy.
+A real-time voice AI assistant that can hear, see, understand, and control your computer — on any OS. Supports Windows, macOS, and Linux. Built on the Gemini Live API for native audio streaming, delivering zero subscriptions and total digital autonomy.
+
+**MARK LII** is JARVIS for your digital life — a fully personalized, voice-controlled AI assistant with persistent memory, visual awareness, and deep system integration.
 
 ---
 
@@ -195,16 +201,143 @@ It is held in memory only, deliberately: writing it to disk would make a fresh l
 
 ---
 
+## 📑 Table of Contents
+
+- [Overview](#-overview)
+- [Key Features](#-capabilities)
+- [What's New in Mark LII](#-whats-new-in-mark-lii)
+- [Quick Start](#-quick-start)
+- [Installation Guide](#-installation-guide)
+- [Configuration](#-configuration)
+- [Requirements](#-requirements)
+- [Project Structure](#-project-structure)
+- [Usage Examples](#-usage-examples)
+- [Troubleshooting](#-troubleshooting)
+- [Roadmap](#-mark-roadmap)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Connect](#-connect-with-the-creator)
+
+---
+
 ## ⚡ Quick Start
+
+**Get started in 3 minutes:**
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/FatihMakes/Mark-LII.git
+cd Mark-LII
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Configure your API key (see Configuration section below)
+
+# 4. Run the assistant
+python main.py
+```
+
+---
+
+## 🔧 Installation Guide
+
+### Prerequisites
+
+Before installing MARK LII, ensure you have:
+
+- **Python 3.11 or 3.12** ([Download here](https://www.python.org/downloads/))
+- **A working microphone and speakers**
+- **Free Gemini API Key** ([Get one here](https://aistudio.google.com/apikey))
+
+### Step-by-Step Installation
+
+#### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/FatihMakes/Mark-LII.git
 cd Mark-LII
+```
+
+#### 2️⃣ Install Python Dependencies
+
+```bash
 pip install -r requirements.txt
+```
+
+> ⚠️ **Platform-Specific Dependencies:** Some OS-specific packages are not bundled in `requirements.txt`. If you encounter a `ModuleNotFoundError`, install the missing package:
+> ```bash
+> pip install <module_name>
+> ```
+
+#### 3️⃣ Install Playwright (for browser automation)
+
+```bash
+playwright install
+```
+
+#### 4️⃣ Configure API Keys
+
+1. Navigate to `config/api_keys.json.example`
+2. Copy it and rename to `api_keys.json`
+3. Add your Gemini API key:
+
+```json
+{
+  "gemini_api_key": "YOUR_API_KEY_HERE"
+}
+```
+
+#### 5️⃣ Run the First-Time Setup
+
+```bash
+python setup.py
+```
+
+This will guide you through:
+- Microphone and speaker selection
+- Assistant name customization
+- Voice preference
+- UI theme color
+
+#### 6️⃣ Launch MARK LII
+
+```bash
 python main.py
 ```
 
-> ⚠️ **Installation Note:** Some OS-specific dependencies are not bundled in `requirements.txt` to keep the repo lightweight. If you hit a `ModuleNotFoundError`, install the missing package with `pip install <module_name>`.
+---
+
+## ⚙️ Configuration
+
+### API Keys Configuration
+
+Edit `config/api_keys.json`:
+
+```json
+{
+  "gemini_api_key": "your-gemini-api-key",
+  "voice": "Puck",
+  "color": "#00d9ff",
+  "assistant_name": "JARVIS",
+  "user_name": "Sir"
+}
+```
+
+### Customizing the Assistant
+
+From the UI, click **⚙ Customise Assistant** to change:
+- **Voice**: Choose from Charon, Puck, Kore, Fenrir, Aoede
+- **Theme Color**: Pick any color with the hue wheel or hex code
+- **Audio Devices**: Select specific microphone and speakers
+- **Boot Sound**: Enable/disable the startup animation sound
+
+### Memory Management
+
+All memories are stored in `memory/long_term.json`. You can:
+- View all stored facts from **🧠 MEMORY** panel in the UI
+- Delete specific memories by clicking the ✕ button
+- Memories include: identity, preferences, projects, and sessions
 
 ---
 
@@ -213,10 +346,129 @@ python main.py
 | Requirement | Details |
 | --- | --- |
 | **OS** | Windows 10/11, macOS, or Linux |
-| **Python** | 3.11 or 3.12 |
+| **Python** | 3.11 or 3.12 ([Download](https://www.python.org/downloads/)) |
 | **Microphone** | Required for voice interaction |
 | **Speakers** | Required for voice replies |
-| **API Key** | Free Gemini API key (`config/api_keys.json`) |
+| **API Key** | Free Gemini API key ([Get here](https://aistudio.google.com/apikey)) |
+| **Internet** | Required for AI model and web features |
+| **Storage** | ~500 MB for project and dependencies |
+
+### Python Package Dependencies
+
+Main packages (see `requirements.txt` for full list):
+- `PyQt6` - UI framework
+- `google-genai` - Gemini API client
+- `sounddevice` - Audio I/O
+- `playwright` - Browser automation
+- `pyautogui` - System control
+- `opencv-python` - Vision processing
+- `fastapi` - Remote dashboard API
+
+---
+
+## 💬 Usage Examples
+
+### Basic Voice Commands
+
+```
+"Hey JARVIS, what's the weather in New York?"
+"Open Chrome"
+"Turn up the volume"
+"Take a screenshot"
+"What's on my screen?"
+"Search for Python tutorials"
+"Set a reminder for 3 PM tomorrow"
+"Play Never Gonna Give You Up on YouTube"
+```
+
+### Advanced Capabilities
+
+#### File Management
+```
+"Create a folder called Projects on my desktop"
+"Move all PDFs from Downloads to Documents"
+"Find all Python files in my home directory"
+```
+
+#### Browser Control
+```
+"Open Google in Chrome"
+"Search for AI news on DuckDuckGo"
+"Close all browser tabs"
+"Take a screenshot of this webpage"
+```
+
+#### System Control
+```
+"Show me my system status"
+"What's my CPU temperature?"
+"Lock my screen"
+"Restart the computer" (with confirmation)
+```
+
+#### Code Assistance
+```
+"Write a Python function to sort a list"
+"Explain this code" (with screen capture)
+"Run main.py"
+"Create a Flask web app"
+```
+
+#### Memory & Context
+```
+"Remember that my favorite color is blue"
+"What did we discuss yesterday?"
+"What projects am I working on?"
+```
+
+---
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+#### ❌ "ModuleNotFoundError"
+**Solution:** Install the missing module:
+```bash
+pip install <module_name>
+```
+
+#### ❌ "JARVIS can't hear me"
+**Solution:** 
+1. Open **⚙ → 🎧 AUDIO DEVICES**
+2. Select the correct microphone
+3. Test by speaking - watch the waveform for activity
+
+#### ❌ "No audio output"
+**Solution:**
+1. Check **⚙ → 🎧 AUDIO DEVICES**
+2. Select the correct speaker/headphones
+3. Ensure system volume is not muted
+
+#### ❌ "API Key Error"
+**Solution:**
+1. Verify your API key in `config/api_keys.json`
+2. Get a new key from [Google AI Studio](https://aistudio.google.com/apikey)
+3. Ensure the key has proper permissions
+
+#### ❌ "Playwright browsers not found"
+**Solution:**
+```bash
+playwright install
+```
+
+#### ❌ "Connection drops frequently"
+**Solution:**
+- Check your internet connection
+- The session will auto-resume and maintain conversation context
+- Network interruptions are handled gracefully
+
+### Performance Tips
+
+- **Lower CPU usage:** Disable boot sound and visual effects
+- **Faster responses:** Ensure stable internet connection
+- **Better accuracy:** Use a quality microphone in a quiet environment
+- **Memory management:** Periodically review and clean old memories from the **🧠 MEMORY** panel
 
 ---
 
@@ -266,19 +518,75 @@ Mark LII/
 
 ---
 
+## 🤝 Contributing
+
+While this is primarily a personal project, feedback and bug reports are welcome!
+
+### How to Report Issues
+
+1. Check existing issues to avoid duplicates
+2. Provide detailed description of the problem
+3. Include your OS, Python version, and error logs
+4. Steps to reproduce the issue
+
+### Feature Requests
+
+Open an issue with the tag `enhancement` and describe:
+- What feature you'd like to see
+- Why it would be useful
+- Any implementation ideas
+
+---
+
 ## ⚠️ License
 
 Personal and non-commercial use only.
 Licensed under **[Creative Commons BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)**.
+
+**You are free to:**
+- ✅ Use for personal projects
+- ✅ Modify and adapt the code
+- ✅ Share with attribution
+
+**You may not:**
+- ❌ Use for commercial purposes
+- ❌ Remove attribution
+- ❌ Sell or sublicense
 
 ---
 
 ## 👤 Connect with the Creator
 
 Engineered by a developer building a real-world JARVIS-style assistant.
-⭐ **Star the repository to support the journey to Mark 100.**
 
-| Platform | Link |
-| --- | --- |
-| YouTube | [@FatihMakes](https://www.youtube.com/@FatihMakes) |
-| Instagram | [@fatihmakes](https://www.instagram.com/fatihmakes) |
+⭐ **Star this repository** to support the journey to Mark 100!
+
+| Platform | Link | Description |
+| --- | --- | --- |
+| 📺 YouTube | [@FatihMakes](https://www.youtube.com/@FatihMakes) | Tutorials, updates, and demos |
+| 📸 Instagram | [@fatihmakes](https://www.instagram.com/fatihmakes) | Behind-the-scenes content |
+| 💬 Discord | Coming Soon | Community support |
+
+---
+
+## 🙏 Acknowledgments
+
+Built with:
+- **Google Gemini API** - AI capabilities
+- **PyQt6** - Modern UI framework
+- **Playwright** - Browser automation
+- **sounddevice** - Audio processing
+
+Special thanks to the open-source community for making projects like this possible.
+
+---
+
+<div align="center">
+
+**Made with ❤️ by FatihMakes**
+
+*Building the future, one Mark at a time.*
+
+[⬆ Back to Top](#-mark-lii---ai-personal-assistant)
+
+</div>
