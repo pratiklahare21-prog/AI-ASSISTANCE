@@ -1,0 +1,28 @@
+# ============================================================================
+# MARK LII - Minimal Requirements
+# Bare minimum to run core functionality (no browser automation, etc.)
+# Install with: pip install -r requirements-minimal.txt
+# ============================================================================
+
+# Core UI
+PyQt6>=6.4.0
+
+# Audio
+sounddevice>=0.4.6
+numpy>=1.24.0
+
+# AI
+google-genai>=2.8.0
+
+# Essential utilities
+requests>=2.31.0
+pillow>=10.0.0
+psutil>=5.9.0
+
+# Windows-only (conditional)
+pywin32>=305; sys_platform == "win32"
+
+# ============================================================================
+# Note: This is a minimal install. Many features will not work.
+# Use requirements.txt for full functionality.
+# ============================================================================

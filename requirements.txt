@@ -1,29 +1,87 @@
-PyQt6
-sounddevice
-google-genai>=2.8.0
-google-generativeai
-pillow
-requests
-beautifulsoup4
-ddgs>=9.0.0
-playwright
-pyautogui
-pyperclip
-pygetwindow
-opencv-python
-numpy
-mss
-psutil
-send2trash
-youtube-transcript-api
-python-pptx
-fastapi
-uvicorn[standard]
-cryptography
-python-multipart
-comtypes; sys_platform == "win32"
-pycaw; sys_platform == "win32"
-win10toast; sys_platform == "win32"
-pywinauto; sys_platform == "win32"
-pywin32; sys_platform == "win32"
-qrcode[pil]
+# ============================================================================
+# MARK LII - AI Personal Assistant
+# Requirements file for Python 3.11-3.12
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# Core UI Framework
+# ----------------------------------------------------------------------------
+PyQt6>=6.4.0                    # Modern Qt6 bindings for Python UI
+
+# ----------------------------------------------------------------------------
+# Audio Processing
+# ----------------------------------------------------------------------------
+sounddevice>=0.4.6              # Real-time audio I/O
+numpy>=1.24.0                   # Numerical operations for audio processing
+
+# ----------------------------------------------------------------------------
+# AI & Machine Learning
+# ----------------------------------------------------------------------------
+google-genai>=2.8.0             # Google Gemini API client (native audio)
+google-generativeai>=0.3.0      # Google Generative AI library
+
+# ----------------------------------------------------------------------------
+# Computer Vision & Screen Capture
+# ----------------------------------------------------------------------------
+opencv-python>=4.8.0            # Computer vision and image processing
+pillow>=10.0.0                  # Image manipulation
+mss>=9.0.0                      # Fast cross-platform screen capture
+
+# ----------------------------------------------------------------------------
+# Web & Network
+# ----------------------------------------------------------------------------
+requests>=2.31.0                # HTTP library for API calls
+beautifulsoup4>=4.12.0          # HTML parsing for web scraping
+ddgs>=9.0.0                     # DuckDuckGo search API
+playwright>=1.40.0              # Browser automation
+
+# ----------------------------------------------------------------------------
+# System Control & Automation
+# ----------------------------------------------------------------------------
+pyautogui>=0.9.54               # GUI automation (mouse, keyboard)
+pyperclip>=1.8.2                # Clipboard operations
+pygetwindow>=0.0.9              # Window management
+psutil>=5.9.0                   # System and process utilities
+send2trash>=1.8.2               # Safe file deletion (to recycle bin)
+
+# ----------------------------------------------------------------------------
+# File Processing
+# ----------------------------------------------------------------------------
+python-pptx>=0.6.21             # PowerPoint file processing
+youtube-transcript-api>=0.6.1   # YouTube transcript extraction
+
+# ----------------------------------------------------------------------------
+# Remote Dashboard & API
+# ----------------------------------------------------------------------------
+fastapi>=0.104.0                # Modern web framework for API
+uvicorn[standard]>=0.24.0       # ASGI server with websocket support
+cryptography>=41.0.0            # Encryption and security
+python-multipart>=0.0.6         # Multipart form data parsing
+qrcode[pil]>=7.4.2              # QR code generation for remote access
+
+# ----------------------------------------------------------------------------
+# Windows-Specific Dependencies
+# ----------------------------------------------------------------------------
+comtypes>=1.2.0; sys_platform == "win32"        # COM interface access
+pycaw>=20231129; sys_platform == "win32"        # Windows Core Audio API
+win10toast>=0.9; sys_platform == "win32"        # Windows 10 notifications
+pywinauto>=0.6.8; sys_platform == "win32"       # Windows GUI automation
+pywin32>=305; sys_platform == "win32"           # Python Windows extensions
+
+# ----------------------------------------------------------------------------
+# Optional: Development & Testing (uncomment if needed)
+# ----------------------------------------------------------------------------
+# black>=23.0.0                 # Code formatter
+# flake8>=6.0.0                 # Linting
+# mypy>=1.5.0                   # Type checking
+# pytest>=7.4.0                 # Testing framework
+# pytest-cov>=4.1.0             # Test coverage
+
+# ============================================================================
+# Installation Notes:
+# - Run: pip install -r requirements.txt
+# - For Playwright: Run 'playwright install' after pip install
+# - Windows users: Some packages require Visual C++ Redistributable
+# - macOS users: May need Xcode Command Line Tools
+# - Linux users: May need system packages like portaudio19-dev
+# ============================================================================

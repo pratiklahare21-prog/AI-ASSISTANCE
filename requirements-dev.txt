@@ -1,0 +1,57 @@
+# ============================================================================
+# MARK LII - Development Dependencies
+# Install with: pip install -r requirements-dev.txt
+# ============================================================================
+
+# Include base requirements
+-r requirements.txt
+
+# ----------------------------------------------------------------------------
+# Code Quality & Formatting
+# ----------------------------------------------------------------------------
+black>=23.12.0                  # Opinionated code formatter
+isort>=5.13.0                   # Import sorting
+flake8>=7.0.0                   # Linting and style checking
+flake8-docstrings>=1.7.0        # Docstring linting
+pylint>=3.0.0                   # Advanced static analysis
+
+# ----------------------------------------------------------------------------
+# Type Checking
+# ----------------------------------------------------------------------------
+mypy>=1.8.0                     # Static type checker
+types-requests>=2.31.0          # Type stubs for requests
+types-Pillow>=10.1.0            # Type stubs for Pillow
+
+# ----------------------------------------------------------------------------
+# Testing
+# ----------------------------------------------------------------------------
+pytest>=7.4.0                   # Testing framework
+pytest-cov>=4.1.0               # Test coverage plugin
+pytest-asyncio>=0.21.0          # Async testing support
+pytest-mock>=3.12.0             # Mocking support
+
+# ----------------------------------------------------------------------------
+# Documentation
+# ----------------------------------------------------------------------------
+sphinx>=7.2.0                   # Documentation generator
+sphinx-rtd-theme>=2.0.0         # Read the Docs theme
+
+# ----------------------------------------------------------------------------
+# Debugging & Profiling
+# ----------------------------------------------------------------------------
+ipython>=8.18.0                 # Enhanced Python shell
+ipdb>=0.13.13                   # IPython debugger
+memory-profiler>=0.61.0         # Memory profiling
+
+# ----------------------------------------------------------------------------
+# Build & Distribution
+# ----------------------------------------------------------------------------
+build>=1.0.0                    # PEP 517 build frontend
+twine>=4.0.0                    # Package upload tool
+setuptools>=69.0.0              # Build system
+wheel>=0.42.0                   # Wheel distribution format
+
+# ============================================================================
+# Usage:
+# pip install -r requirements-dev.txt
+# ============================================================================
