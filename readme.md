@@ -68,7 +68,7 @@ It's not just an assistant — it's an extension of your digital life.
 | 📱 Remote Dashboard | Control the assistant from your phone via QR code pairing |
 | ⚡ Auto-Start on Boot | Registers with the OS startup system (registry / LaunchAgent / .desktop) |
 | 📋 Clipboard Intelligence | Copy any text → floating panel with Translate / Summarise / Explain / Fix |
-| 🪪 Assistant Customization | Change the assistant name, your name, voice, and colour from the UI — takes effect immediately |
+| 🪪 Assistant Customization | Change the assistant name, your name, voice, and colour from the UI — takes effect immediately
 
 ---
 
@@ -90,11 +90,9 @@ Every launch now opens with a proper boot: a ~2.4-second cinematic **transform**
 > Built on Mark LI's foundation: the **🧩 Plugin System** (extend JARVIS with a single drop-in file), **💓 Affective Dialog**, **🤫 Proactive Audio**, and **♾️ Unlimited Sessions** are all still here and unchanged.
 
 ---
-
 ## 🔄 The Foundation Update — in every Mark from LII
 
 These four landed across **Mark LII, LIII, LIV and LV at the same time**, after each of those releases had already shipped. They are not what any one of those versions originally introduced; they are the floor all of them now stand on, so moving up a Mark never costs you something the one below it had.
-
 No new dependencies. No bundled asset files. No hardcoded language, and nothing that assumes one operating system.
 
 ### 🧠 A memory that actually remembers
@@ -139,7 +137,7 @@ The old gate read like this:
 ```python
 if action in _DANGEROUS_ACTIONS:            # {"restart", "shutdown"}
     confirmed = str(params.get("confirmed", "")).lower()
-```
+``` 
 
 `confirmed` is a **tool parameter, which means the model fills it in.** Nothing stopped it sending `confirmed=yes` on the first call and nothing checked that a human was ever involved. It was a convention, not a gate. And its coverage was two actions — so `toggle_wifi`, which cuts the assistant's own connection to the Live API and therefore *cannot be asked to undo itself*, went through with no gate at all.
 
@@ -183,8 +181,6 @@ It is held in memory only, deliberately: writing it to disk would make a fresh l
 * **Every computer command paid for two model round trips.** `computer_settings` made an *entire second Gemini call, inside the tool*, purely to translate the request into one of its own action names — because the declaration only said "The action to perform", so the model rarely filled it in. When that second call failed, the fallback was `description.lower().replace(" ", "_")`, which turns the Turkish for "turn it down" into `sesi_kis` and straight into "Unknown action". The declaration now names all 56 actions and the rest is spelling tolerance handled locally by `difflib` in microseconds. When nothing matches it suggests real action names instead of dead-ending.
 * An unresolvable saved audio device, or one the driver refuses to open, falls back to the system default and says so — on both the microphone and the speakers.
 * A rejected session-resumption handle is dropped after one attempt, so an expired handle can never be replayed on every retry and prevent the reconnect it exists to protect.
-
-
 
 ---
 

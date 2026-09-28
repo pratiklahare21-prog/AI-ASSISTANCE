@@ -921,7 +921,8 @@ class JarvisLive:
 
         # Load customization from config
         try:
-            _cfg = json.loads(open(API_CONFIG_PATH, encoding="utf-8").read())
+            with open(API_CONFIG_PATH, encoding="utf-8") as f:
+                _cfg = json.load(f)
             self._asst_name = (_cfg.get("assistant_name") or "JARVIS").strip()
             _user_name = (_cfg.get("user_name") or "").strip()
         except Exception:

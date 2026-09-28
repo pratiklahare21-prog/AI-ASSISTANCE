@@ -3,7 +3,6 @@
 Project Cleanup Utility
 Removes Python cache files, temporary files, and other build artifacts
 """
-
 import os
 import shutil
 from pathlib import Path

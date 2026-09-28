@@ -11,6 +11,7 @@ from PyQt6.QtGui import QKeySequence
 # Tooltip Definitions
 # ============================================================================
 
+
 TOOLTIPS = {
     # Main Controls
     "mute_btn": "Mute/Unmute microphone (Ctrl+M)",
@@ -67,6 +68,7 @@ def apply_tooltips(widget_dict: dict):
         if key in TOOLTIPS and hasattr(widget, 'setToolTip'):
             widget.setToolTip(TOOLTIPS[key])
 
+
 # ============================================================================
 # Status Indicators
 # ============================================================================
@@ -113,6 +115,7 @@ def generate_focus_style(primary_color: str) -> str:
         }}
     """
 
+
 # ============================================================================
 # Responsive Layout Helpers
 # ============================================================================
@@ -135,6 +138,7 @@ class ResponsiveBreakpoints:
             return "comfortable"
         else:
             return "spacious"
+
 
 # ============================================================================
 # Animation Helpers

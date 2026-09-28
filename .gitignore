@@ -39,6 +39,8 @@ htmlcov/
 # ── Runtime state ────────────────────────────────────────────────────────
 memory/*.json
 !memory/.gitkeep
+logs/*.log
+!logs/.gitkeep
 *.log
 *.log.*
 *.tmp
