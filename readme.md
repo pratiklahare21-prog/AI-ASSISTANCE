@@ -1,4 +1,5 @@
 # ⚙️ MARK LII - AI Personal Assistant
+
 ### The Ultimate Cross-Platform Personal AI Assistant — By FatihMakes
 
 [![Python Version](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue.svg)](https://www.python.org/downloads/)
@@ -90,6 +91,7 @@ Every launch now opens with a proper boot: a ~2.4-second cinematic **transform**
 > Built on Mark LI's foundation: the **🧩 Plugin System** (extend JARVIS with a single drop-in file), **💓 Affective Dialog**, **🤫 Proactive Audio**, and **♾️ Unlimited Sessions** are all still here and unchanged.
 
 ---
+
 ## 🔄 The Foundation Update — in every Mark from LII
 
 These four landed across **Mark LII, LIII, LIV and LV at the same time**, after each of those releases had already shipped. They are not what any one of those versions originally introduced; they are the floor all of them now stand on, so moving up a Mark never costs you something the one below it had.
@@ -233,7 +235,6 @@ pip install -r requirements.txt
 # 4. Run the assistant
 python main.py
 ```
-
 ---
 
 ## 🔧 Installation Guide
