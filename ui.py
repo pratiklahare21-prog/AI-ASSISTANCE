@@ -11,6 +11,7 @@ import threading
 import time
 from pathlib import Path
 
+
 import psutil
 
 if platform.system() == "Windows":
@@ -175,6 +176,7 @@ _nvml_lib: object = None   # cached ctypes DLL
 _nvml_ok:  object = None   # None=untested, True=works, False=unavailable
 
 
+
 def _nvml_gpu_windows() -> float:
     """Return NVIDIA GPU utilisation % using nvml.dll directly — zero subprocess."""
     global _nvml_lib, _nvml_ok
@@ -212,7 +214,6 @@ def _nvml_gpu_windows() -> float:
     except Exception:
         _nvml_ok = False
         return -1.0
-
 
 class _SysMetrics:
     def __init__(self):
@@ -333,7 +334,6 @@ class _SysMetrics:
                 "gpu": self.gpu,
                 "tmp": self.tmp,
             }
-
 
 _metrics = _SysMetrics()
 
