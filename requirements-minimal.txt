@@ -21,7 +21,6 @@ psutil>=5.9.0
 
 # Windows-only (conditional)
 pywin32>=305; sys_platform == "win32"
-
 # ============================================================================
 # Note: This is a minimal install. Many features will not work.
 # Use requirements.txt for full functionality.
