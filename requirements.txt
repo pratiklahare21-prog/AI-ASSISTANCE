@@ -1,9 +1,12 @@
+
+
 # ============================================================================
 # MARK LII - AI Personal Assistant
 # Requirements file for Python 3.11-3.12
 # ============================================================================
 
-# ----------------------------------------------------------------------------
+# ---------------------
+-------------------------------------------------------
 # Core UI Framework
 # ----------------------------------------------------------------------------
 PyQt6>=6.4.0                    # Modern Qt6 bindings for Python UI
@@ -13,6 +16,7 @@ PyQt6>=6.4.0                    # Modern Qt6 bindings for Python UI
 # ----------------------------------------------------------------------------
 sounddevice>=0.4.6              # Real-time audio I/O
 numpy>=1.24.0                   # Numerical operations for audio processing
+
 
 # ----------------------------------------------------------------------------
 # AI & Machine Learning
@@ -26,6 +30,7 @@ google-generativeai>=0.3.0      # Google Generative AI library
 opencv-python>=4.8.0            # Computer vision and image processing
 pillow>=10.0.0                  # Image manipulation
 mss>=9.0.0                      # Fast cross-platform screen capture
+
 
 # ----------------------------------------------------------------------------
 # Web & Network

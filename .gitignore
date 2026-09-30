@@ -57,10 +57,11 @@ desktop.ini
 *.bak
 .history/
 
-
 # ── Playwright browsers (optional, can be large) ─────────────────────────
 # Uncomment if you want to exclude browser binaries
 # .playwright/
+
+
 
 # ── Local development ────────────────────────────────────────────────────
 *.local
